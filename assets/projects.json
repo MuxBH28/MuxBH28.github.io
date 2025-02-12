@@ -1,0 +1,112 @@
+[
+    {
+        "icon": "bi-house-door",
+        "title": "School Page",
+        "description": "A modern website designed for a school project with dynamic features.",
+        "image": "etse.png",
+        "link": "https://etssa.great-site.net/",
+        "development": "Sep 2022 - Apr 2023",
+        "status": "Abandoned",
+        "category": "Client"
+    },
+    {
+        "icon": "bi-bell",
+        "title": "Vatrodojava",
+        "description": "A web application for reporting fires by filling out a form and sending the data to a database, which authorized personnel can review.",
+        "image": "vatrodojava.png",
+        "link": "https://vatrodojava.rf.gd/",
+        "development": "Jan - Feb 2023",
+        "status": "Completed",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-film",
+        "title": "Elektrogasci movie",
+        "description": "A video film created to explain the purpose of the Vatrodojava project through humorous and educational scenes of two characters, Zaim and Velija.",
+        "image": "elektrogasci.png",
+        "link": "https://youtu.be/_bmK4C8KEkE",
+        "development": "Feb 2023",
+        "status": "Completed",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-heart",
+        "title": "Volim Te App",
+        "description": "An Electron app designed for Windows and Linux to calculate the time interval between a selected date and the present.",
+        "image": "volimteapp.png",
+        "link": "https://sehic.rf.gd/volimte",
+        "development": "Since Dec 2023",
+        "status": "On hold",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-building",
+        "title": "KF interiors",
+        "description": "A website for a company specializing in custom-made furniture, offering options for designing and assembling furniture.",
+        "image": "kfi.png",
+        "link": "https://kfinteriors.ba/",
+        "development": "Feb 2024",
+        "status": "Completed",
+        "category": "Client"
+    },
+    {
+        "icon": "bi-browser-firefox",
+        "title": "Web Widgetizer",
+        "description": "A browser extension for Opera and Firefox that manages favorite links, creates separate windows for specific websites, and enhances the browsing experience.",
+        "image": "web.png",
+        "link": "https://github.com/MuxBH28/web-widgetizer/",
+        "development": "Feb - Nov 2024",
+        "status": "Completed",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-palette",
+        "title": "BiH Theme",
+        "description": "A VS Code theme that provides a vibrant coding experience with colors inspired by the Bosnian flag and landscapes.",
+        "image": "bih.png",
+        "link": "https://marketplace.visualstudio.com/items?itemName=Mux.bih-theme",
+        "development": "Apr 1st, 2024",
+        "status": "Completed",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-lightning",
+        "title": "Turbine Tech",
+        "description": "A website presenting a project on renewable energy, featuring data monitoring from an Arduino device.",
+        "image": "turbinetech.png",
+        "link": "https://turbinetech.ba/",
+        "development": "Apr 2024",
+        "status": "Completed",
+        "category": "Client"
+    },
+    {
+        "icon": "bi-clock",
+        "title": "Vaktija Desklet",
+        "description": "A Linux Mint Cinnamon widget that pulls data from a vaktija API and displays it on the desktop with additional configuration options.",
+        "image": "vd.png",
+        "link": "https://cinnamon-spices.linuxmint.com/desklets/view/67",
+        "development": "July-Aug 2024",
+        "status": "On hold",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-tree",
+        "title": "HAX WOOD",
+        "description": "A website for a company specializing in custom cabins, wooden houses, and other timber products.",
+        "image": "haxwood.png",
+        "link": "https://haxwood.ba",
+        "development": "Dec 2024",
+        "status": "Completed",
+        "category": "Client"
+    },
+    {
+        "icon": "bi-microsoft",
+        "title": "Turbine Tech App",
+        "description": "An application for Windows PC designed to monitor the performance of a hybrid Savonius turbine, offering detailed analyses and real-time insights. Available on Microsoft Store!",
+        "image": "turbinetechapp.png",
+        "link": "https://turbinetech.ba/app",
+        "development": "Since Dec 2024",
+        "status": "In progress",
+        "category": "Client"
+    }
+]
