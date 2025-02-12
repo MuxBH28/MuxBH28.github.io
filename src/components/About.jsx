@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
     return (
         <section id="about" className="p-5 bg-dark" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div className="row d-flex">
+            <div className="row d-flex text-light">
                 <div className="col-lg-9" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
                     <h2 className="mb-4 text-danger"><i className="bi bi-file-earmark-person"></i> About Me</h2>
 
@@ -27,7 +27,7 @@ const About = () => {
 
                 <div className="col-lg-3 text-center d-flex flex-column" data-aos="fade-up" data-aos-duration="1600" data-aos-easing="ease-in-out">
                     <img
-                        src="./src/assets/muhammed.jpg"
+                        src="./assets/muhammed.jpg"
                         alt="Muhammed Šehić in December of 2022"
                         className="img-fluid rounded mb-4"
                     />

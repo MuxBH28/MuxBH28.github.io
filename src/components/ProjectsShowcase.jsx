@@ -4,7 +4,7 @@ const ProjectsShowcase = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch('/src/assets/projects.json')
+        fetch('./assets/projects.json')
             .then((response) => response.json())
             .then((data) => setProjects(data))
             .catch((error) => console.error('Error loading projects data:', error));
@@ -40,7 +40,7 @@ const ProjectsShowcase = () => {
                                 >
                                     <div className="card text-dark shadow-lg rounded h-100">
                                         <img
-                                            src={`/src/assets/projects/${project.image}`}
+                                            src={`./assets/projects/${project.image}`}
                                             alt={project.title}
                                             className="card-img-top rounded-top w-100"
                                             style={{
@@ -72,7 +72,7 @@ const ProjectsShowcase = () => {
                                 <div className="card text-dark shadow-lg rounded h-100">
                                     <div className="card-body text-center d-flex flex-column justify-content-center">
                                         <img
-                                            src="src/assets/logo.png"
+                                            src="./assets/logo.png"
                                             alt="Logo"
                                             className="card-img-top rounded-top w-100"
                                             style={{

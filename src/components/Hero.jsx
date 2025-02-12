@@ -18,7 +18,7 @@ const Hero = () => {
                     </a>
                 </div>
                 <div className="col-12 col-md-4 d-flex justify-content-center" data-aos="fade-right">
-                    <img src="./src/assets/logo.gif" alt="Logo" className="img-fluid" />
+                    <img src="./assets/logo.gif" alt="Logo" className="img-fluid" />
                 </div>
             </div>
         </section>

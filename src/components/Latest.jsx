@@ -4,7 +4,7 @@ const Latest = () => {
     const [latestProject, setLatestProject] = useState(null);
 
     useEffect(() => {
-        fetch("/src/assets/projects.json")
+        fetch("./assets/projects.json")
             .then((response) => response.json())
             .then((data) => {
                 setLatestProject(data[data.length - 1]);
