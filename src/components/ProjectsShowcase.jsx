@@ -82,12 +82,9 @@ const ProjectsShowcase = () => {
                                         />
                                         <h5 className="card-title text-danger">See More Projects</h5>
                                         <p className="card-text">Explore all the other projects I've worked on.</p>
-                                        <a
-                                            href="/projects"
-                                            className="btn btn-danger w-100 mt-auto"
-                                        >
+                                        <Link className="btn btn-danger w-100 mt-auto" to="/projects">
                                             View All Projects
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
