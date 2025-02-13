@@ -91,7 +91,7 @@ const Contact = () => {
         data.append("g-recaptcha-response", recaptchaToken);
 
         try {
-            const response = await fetch("https://sehic.rf.gd/contact.php", {
+            const response = await fetch("http://etse.atwebpages.com/contact.php", {
                 method: "POST",
                 body: data,
             });
