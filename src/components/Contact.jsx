@@ -70,6 +70,8 @@ const Contact = () => {
         });
     };
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -79,6 +81,8 @@ const Contact = () => {
             responseMsg.innerText = "Please verify the CAPTCHA.";
             return;
         }
+
+        setIsSubmitting(true);
 
         const data = new FormData();
         data.append("name", formData.name);
@@ -103,6 +107,8 @@ const Contact = () => {
         } catch (error) {
             responseMsg.innerText = "Error sending the message. Please try again later.";
         }
+
+        setIsSubmitting(false);
     };
 
     return (
@@ -170,8 +176,10 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
                                 <input type="hidden" name="g-recaptcha-response" value={recaptchaToken} />
-                                <p id="responseMsg"></p>
-                                <button type="submit" className="btn btn-danger w-100">Send Message</button>
+                                <p id="responseMsg" className="text-danger"></p>
+                                <button type="submit" className="btn btn-danger w-100" disabled={isSubmitting}>
+                                    {isSubmitting ? "Sending..." : "Send Message"}
+                                </button>
                             </form>
                         </div>
                     </div>
