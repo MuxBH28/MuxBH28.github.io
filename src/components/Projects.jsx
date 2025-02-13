@@ -71,7 +71,7 @@ const Projects = () => {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="btn btn-outline-danger w-100 mt-2 text-decoration-none"
+                                            className="btn btn-outline-danger w-100 mt-2"
                                         >
                                             <i className="bi bi-box-arrow-up-right"></i> View Project
                                         </a>

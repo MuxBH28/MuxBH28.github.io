@@ -71,16 +71,16 @@ const ProjectsShowcase = () => {
                                 data-aos-easing="ease-in-out"
                             >
                                 <div className="card text-dark shadow-lg rounded h-100">
-                                    <div className="card-body text-center d-flex flex-column justify-content-center">
-                                        <img
-                                            src="./assets/logo.png"
-                                            alt="Logo"
-                                            className="card-img-top rounded-top w-100"
-                                            style={{
-                                                height: '200px',
-                                                objectFit: 'cover',
-                                            }}
-                                        />
+                                    <img
+                                        src={`./assets/projects/github.png`}
+                                        alt="Open projects"
+                                        className="card-img-top rounded-top w-100"
+                                        style={{
+                                            height: '200px',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                    <div className="card-body d-flex flex-column">
                                         <h5 className="card-title text-danger">See More Projects</h5>
                                         <p className="card-text">Explore all the other projects I've worked on.</p>
                                         <Link className="btn btn-danger w-100 mt-auto" to="/projects">

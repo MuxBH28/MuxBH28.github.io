@@ -20,11 +20,10 @@ body {
   color: white;
 }
 
-
 a {
-  color: #ff4d4d;
+  text-decoration: none !important;
 }
 
-a:hover {
-  text-decoration: underline;
+.accordion-button {
+  background-color: transparent !important;
 }

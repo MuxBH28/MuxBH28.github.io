@@ -4,6 +4,8 @@ import Latest from "./Latest";
 import About from "./About";
 import Skills from "./Skills";
 import ProjectsShowcase from "./ProjectsShowcase";
+import FAQ from "./FAQ";
+import Recommedations from "./Recommedations";
 
 const Home = () => {
     return (
@@ -13,6 +15,8 @@ const Home = () => {
             <About />
             <Skills />
             <ProjectsShowcase />
+            <FAQ />
+            <Recommedations />
         </div>
     );
 };
