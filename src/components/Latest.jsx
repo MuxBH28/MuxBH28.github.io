@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Latest = () => {
     const [latestProject, setLatestProject] = useState(null);
@@ -25,12 +25,6 @@ const Latest = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
                         <div className="card bg-light text-dark shadow-sm rounded">
-                            <img
-                                src={latestProject.image}
-                                alt={latestProject.title}
-                                className="w-75 h-auto mx-auto mt-3"
-                                style={{ maxHeight: '300px', objectFit: 'cover' }}
-                            />
                             <div className="card-body">
                                 <h4 className="card-title">
                                     <i className={`bi ${latestProject.icon}`}></i> {latestProject.title}

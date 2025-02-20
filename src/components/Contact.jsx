@@ -91,13 +91,13 @@ const Contact = () => {
         data.append("g-recaptcha-response", recaptchaToken);
 
         try {
-            const response = await fetch("http://etse.atwebpages.com/contact.php", {
+            const response = await fetch("https://sehic.rf.gd/contact.php", {
                 method: "POST",
                 body: data,
             });
 
             const result = await response.text();
-            alert(result);
+            responseMsg.innerText = result;
 
             if (response.ok) {
                 setFormData({ name: "", email: "", message: "" });
@@ -105,6 +105,7 @@ const Contact = () => {
             }
 
         } catch (error) {
+            console.log(error);
             responseMsg.innerText = "Error sending the message. Please try again later.";
         }
 

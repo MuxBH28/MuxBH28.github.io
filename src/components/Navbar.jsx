@@ -19,7 +19,6 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    {/* Dodano 'ms-auto' za poravnavanje udesno */}
                     <div className="navbar-nav ms-auto">
                         <Link
                             className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"

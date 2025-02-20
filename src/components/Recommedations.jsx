@@ -1,11 +1,9 @@
-import React from "react";
-
 const recommendations = [
     {
-        name: "EndeavourOS",
-        description: "EndeavourOS is a Arch Linux-based, Linux distribution. Use this one or any other Linux distro.",
+        name: "Arch Linux",
+        description: "I use Arch, btw.",
         icon: "bi-pc-display",
-        link: "https://endeavouros.com/",
+        link: "https://archlinux.org/",
         color: "text-primary",
     },
     {
