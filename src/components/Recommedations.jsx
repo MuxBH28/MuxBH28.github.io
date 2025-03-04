@@ -21,11 +21,11 @@ const recommendations = [
         color: "text-info",
     },
     {
-        name: "Firefox",
-        description: "No shady privacy policies or back doors for advertisers. Just a lightning fast browser that doesn't sell you out.",
+        name: "Floorp",
+        description: "Firefox? Well it is, but better!",
         icon: "bi-browser-firefox",
-        link: "https://www.mozilla.org/en-US/firefox/new/",
-        color: "text-warning",
+        link: "https://floorp.app/en",
+        color: "text-primary",
     },
     {
         name: "Bootstrap",

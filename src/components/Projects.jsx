@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+
 const Projects = () => {
     const [projects, setProjects] = useState([]);
+    const [copiedIndex, setCopiedIndex] = useState(null);
 
     useEffect(() => {
         fetch('./assets/projects.json')
@@ -8,6 +10,12 @@ const Projects = () => {
             .then((data) => setProjects(data))
             .catch((error) => console.error('Error loading projects data:', error));
     }, []);
+
+    const handleCopy = (link, index) => {
+        navigator.clipboard.writeText(link);
+        setCopiedIndex(index);
+        setTimeout(() => setCopiedIndex(null), 2000);
+    };
 
     return (
         <section className="bg-dark py-5" id="projects">
@@ -67,14 +75,23 @@ const Projects = () => {
                                                 {project.category}
                                             </div>
                                         </article>
-                                        <a
-                                            href={project.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="btn btn-outline-danger w-100 mt-2"
-                                        >
-                                            <i className="bi bi-box-arrow-up-right"></i> View Project
-                                        </a>
+                                        <article className="d-flex justify-content-between align-items-center mt-3 gap-2">
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="btn btn-outline-danger w-3/4"
+                                                style={{ flex: "3" }}
+                                            >
+                                                <i className="bi bi-box-arrow-up-right"></i> View Project
+                                            </a>
+                                            <button
+                                                className="btn btn-outline-info w-1/4"
+                                                onClick={() => handleCopy(project.link, index)}
+                                            >
+                                                <i className={`bi ${copiedIndex === index ? 'bi-clipboard-check text-success' : 'bi-share'}`}></i>
+                                            </button>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
