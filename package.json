@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "version": "1.1.7",
+  "version": "1.1.8",
   "type": "module",
   "homepage": "https://muxbh28.github.io/",
   "scripts": {
@@ -10,13 +10,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "tw:init": "tailwindcss init -p"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
