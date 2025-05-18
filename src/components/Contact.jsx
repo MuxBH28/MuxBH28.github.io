@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import axios from 'axios';
 
 const links = [
     {
@@ -39,78 +40,44 @@ const Contact = () => {
         email: "",
         message: "",
     });
-    const [recaptchaToken, setRecaptchaToken] = useState("");
-
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.src = "https://www.google.com/recaptcha/api.js?render=6Lfkl9UqAAAAAGrrjFG4t3jo5xE9mU2ZzmC82PC8";
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-
-        script.onload = () => {
-            window.grecaptcha.ready(() => {
-                window.grecaptcha.execute("6Lfkl9UqAAAAAGrrjFG4t3jo5xE9mU2ZzmC82PC8", { action: "submit" })
-                    .then((token) => {
-                        setRecaptchaToken(token);
-                    });
-            });
-        };
-
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+        setFormData({ ...formData, [name]: value });
     };
-
-    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setIsSubmitting(true);
         const responseMsg = document.getElementById('responseMsg');
 
-        if (!recaptchaToken) {
-            responseMsg.innerText = "Please verify the CAPTCHA.";
-            return;
-        }
-
-        setIsSubmitting(true);
-
-        const data = new FormData();
-        data.append("name", formData.name);
-        data.append("email", formData.email);
-        data.append("message", formData.message);
-        data.append("g-recaptcha-response", recaptchaToken);
-
         try {
-            const response = await fetch("https://sehic.rf.gd/contact.php", {
+            const response = await axios({
+                url: "https://nocodeform.io/f/6829f64f366a22e619fdc271",
                 method: "POST",
-                body: data,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                data: {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                }
             });
 
-            const result = await response.text();
-            responseMsg.innerText = result;
-
-            if (response.ok) {
-                setFormData({ name: "", email: "", message: "" });
-                setRecaptchaToken("");
-            }
+            responseMsg.innerText = "Message sent successfully!";
+            setFormData({ name: "", email: "", message: "" });
 
         } catch (error) {
-            console.log(error);
+            console.error(error);
             responseMsg.innerText = "Error sending the message. Please try again later.";
         }
 
         setIsSubmitting(false);
     };
+
 
     return (
         <section className="d-flex justify-content-center align-items-center vh-100 bg-dark" data-aos="fade">
@@ -141,7 +108,9 @@ const Contact = () => {
 
                     <div className="col-md-6">
                         <div className="contact-card p-5 rounded shadow-lg w-100">
-                            <h2 className="text-danger mb-4 fw-bold"><i className="bi bi-chat-dots"></i> Or send a Message</h2>
+                            <h2 className="text-danger mb-4 fw-bold">
+                                <i className="bi bi-chat-dots"></i> Or send a Message
+                            </h2>
                             <form onSubmit={handleSubmit} className="text-start">
                                 <div className="mb-3" data-aos="fade-up" data-aos-duration="1000">
                                     <input
@@ -176,8 +145,9 @@ const Contact = () => {
                                         required
                                     ></textarea>
                                 </div>
-                                <input type="hidden" name="g-recaptcha-response" value={recaptchaToken} />
-                                <p id="responseMsg" className="text-danger"></p>
+
+                                <p id="responseMsg" className="mt-2 text-white"></p>
+
                                 <button type="submit" className="btn btn-danger w-100" disabled={isSubmitting}>
                                     {isSubmitting ? "Sending..." : "Send Message"}
                                 </button>

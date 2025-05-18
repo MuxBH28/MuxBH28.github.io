@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "version": "1.1.8",
+  "version": "1.2",
   "type": "module",
   "homepage": "https://muxbh28.github.io/",
   "scripts": {
@@ -16,6 +16,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "aos": "^2.3.4",
+    "axios": "^1.9.0",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "react": "^18.3.1",
@@ -33,6 +34,6 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "gh-pages": "^6.3.0",
     "globals": "^15.11.0",
-    "vite": "^5.4.10"
+    "vite": "^6.3.5"
   }
 }
