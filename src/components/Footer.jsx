@@ -15,6 +15,7 @@ const Footer = () => {
                         CC BY 4.0
                     </a>
                 </p>
+                <img src="assets/signature.png" alt="M.Šehić" className="mx-auto my-3 w-32 sm:w-40 md:w-48 object-contain" />
                 <div className="d-flex justify-content-center gap-3">
                     <a href="mailto:sehicmuhammed7@proton.me" target="_blank" rel="noopener noreferrer" className="text-danger fs-4">
                         <i className="bi bi-envelope-at"></i>

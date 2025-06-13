@@ -30,28 +30,28 @@ const Hero = () => {
                 />
             ))}
 
-            <div className="container d-flex flex-column-reverse flex-md-row align-items-center justify-content-between h-100 position-relative content-wrapper">
-                <div className="col-12 col-md-7 hero-text-box">
-                    <h1 className="hero-title">
+            <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between h-100 position-relative content-wrapper">
+                <div className="col-12 col-md-7 hero-text-box text-center text-md-start mb-4 mb-md-0">
+                    <h1 className="hero-title fs-3 fs-md-1">
                         Welcome
                     </h1>
                     <blockquote className="blockquote" data-aos="fade-up">
-                        <p className="fs-4 fw-semibold hero-quote">
+                        <p className="fs-5 fw-semibold hero-quote">
                             It all started in 2008 with a game of Chess on Windows Vista <span className="text-danger">&#9817;</span>
                         </p>
                     </blockquote>
                 </div>
 
-                <div className="col-12 col-md-4 mb-5 mb-md-0" data-aos="fade-right">
-                    <div className="w-100 d-flex justify-content-center">
-                        <img
-                            src="./assets/logo.png"
-                            alt="Logo"
-                            className="hero-logo"
-                        />
-                    </div>
+                <div className="col-12 col-md-4 d-flex justify-content-center" data-aos="fade-right">
+                    <img
+                        src="./assets/logo.png"
+                        alt="Logo"
+                        className="img-fluid"
+                        style={{ maxWidth: "150px" }}
+                    />
                 </div>
             </div>
+
         </section>
     );
 };
