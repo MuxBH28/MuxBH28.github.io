@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import BackToTopButton from "./components/BackToTopButton";
 import CookiesNotice from './components/CookiesNotice';
 import ErrorPage from './components/ErrorPage';
+import Terms from "./components/Terms";
 import { useEffect } from "react";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

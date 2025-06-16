@@ -1,7 +1,7 @@
 const About = () => {
     return (
-        <section id="about" className="p-5 bg-dark" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div className="row d-flex text-light">
+        <section id="about" className="p-5 bg-dark d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div className="row d-flex text-light align-items-center" style={{ maxWidth: '1400px' }}>
                 <div className="col-lg-9" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out">
                     <h2 className="mb-4 text-danger"><i className="bi bi-file-earmark-person"></i> About Me</h2>
 
@@ -27,9 +27,10 @@ const About = () => {
                     <img
                         src="./assets/muhammed.jpg"
                         alt="Muhammed Šehić in December of 2022"
-                        className="img-fluid rounded mb-4"
+                        className="img-fluid rounded mb-4 mx-auto mx-lg-0"
+                        style={{ maxWidth: '90%' }}
                     />
-                    <div className="bg-light text-black p-3 rounded">
+                    <div className="bg-light text-black p-3 rounded" style={{ maxWidth: '90%' }}>
                         <h5 className="mb-3 text-danger">
                             <i className="bi bi-info-circle"></i> Basic Info
                         </h5>

@@ -46,7 +46,7 @@
         "image": "kfi.png",
         "link": "https://kfinteriors.ba/",
         "development": "Feb 2024",
-        "status": "Completed",
+        "status": "Abandoned",
         "category": "Client"
     },
     {
@@ -117,6 +117,16 @@
         "link": "https://github.com/MuxBH28/scriptable-vaktija.ba",
         "development": "4.3.2025.",
         "status": "Completed",
+        "category": "Personal"
+    },
+    {
+        "icon": "bi-geo-alt",
+        "title": "Vaktija360",
+        "description": "Vaktija360 is a minimalist web app with daily prayer times, local weather, and nearby mosques. It supports PWA and uses three data sources.",
+        "image": "vaktija360.png",
+        "link": "vaktija360.msehic.com",
+        "development": "June 2025.",
+        "status": "In progress",
         "category": "Personal"
     }
 ]

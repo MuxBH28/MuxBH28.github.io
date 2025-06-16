@@ -98,3 +98,166 @@ a {
 .glass-card:hover {
   transform: scale(1.02);
 }
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(calc(-50vw + (var(--random) * 100vw)));
+    opacity: 0;
+  }
+}
+
+.typed-text {
+  color: red;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+  color: red;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.glitch-text {
+  position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+
+  5% {
+    clip: rect(5px, 900px, 30px, 0);
+  }
+
+  10% {
+    clip: rect(10px, 900px, 15px, 0);
+  }
+
+  15% {
+    clip: rect(15px, 900px, 40px, 0);
+  }
+
+  20% {
+    clip: rect(5px, 900px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.wheel {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 5px;
+  animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+.arrow-down {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: 5px auto 0;
+  animation: scrollArrow 1.5s infinite;
+}
+
+@keyframes scrollArrow {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

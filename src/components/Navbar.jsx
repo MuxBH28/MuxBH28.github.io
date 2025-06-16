@@ -38,6 +38,14 @@ const Navbar = () => {
                         </Link>
                         <Link
                             className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
+                            to="/terms"
+                            data-aos="fade-left"
+                            data-aos-duration="1300"
+                        >
+                            <i className="bi bi-briefcase me-2"></i>Terms
+                        </Link>
+                        <Link
+                            className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
                             to="/contact"
                             data-aos="fade-left"
                             data-aos-duration="1400"

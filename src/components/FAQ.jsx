@@ -15,7 +15,7 @@ const faqData = [
     },
     {
         question: "Do you work alone?",
-        answer: "I consider myself a 'one-man army' and in about 90% of the cases, I work solo. However, that doesn't mean I can't collaborate with others when needed. For design-related tasks, I often reach out to my talented friend @ajlich_arts to ensure high-quality, professional designs. I'm always open to teamwork if the project requires it!",
+        answer: "I consider myself a 'one-man army' and in about 90% of the cases, I work solo. However, that doesn't mean I can't collaborate with others when needed. I'm always open to teamwork if the project requires it!",
     },
     {
         question: "Do I need to have a hosting server?",
