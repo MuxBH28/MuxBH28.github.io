@@ -34,17 +34,17 @@ const Latest = () => {
                                 {latestProject.description}
                             </p>
                             <a
-                                href={latestProject.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href=`https://latestProject.link`
+                            target="_blank"
+                            rel="noopener noreferrer"
                                 className="btn btn-outline-danger px-4">
-                                <i className="bi bi-link-45deg me-1"></i> View More
-                            </a>
-                        </div>
+                            <i className="bi bi-link-45deg me-1"></i> View More
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        </section >
     );
 };
 

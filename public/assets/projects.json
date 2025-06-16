@@ -124,7 +124,7 @@
         "title": "Vaktija360",
         "description": "Vaktija360 is a minimalist web app with daily prayer times, local weather, and nearby mosques. It supports PWA and uses three data sources.",
         "image": "vaktija360.png",
-        "link": "vaktija360.msehic.com",
+        "link": "https://vaktija360.msehic.com/",
         "development": "June 2025.",
         "status": "In progress",
         "category": "Personal"
