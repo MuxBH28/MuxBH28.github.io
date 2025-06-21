@@ -40,8 +40,11 @@ const About = () => {
                             </li>
                             <li>
                                 <strong><i className="bi bi-envelope"></i> Email: </strong>
-                                <a href="mailto:sehicmuhammed7@proton.me" className="text-dark">
-                                    sehicmuhammed7@proton.me
+                                <a
+                                    href={`mailto:${['sehicmuhammed7', 'proton', 'me'].join('@')}`}
+                                    className="text-dark"
+                                >
+                                    {['sehicmuhammed7', 'proton', 'me'].join('@')}
                                 </a>
                             </li>
                             <li>

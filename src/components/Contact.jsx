@@ -1,9 +1,12 @@
 import { useState } from "react";
 import axios from 'axios';
 
+const emailPart = "sehicmuhammed7";
+const proton = "proton.me";
+
 const links = [
     {
-        href: "mailto:sehicmuhammed7@proton.me",
+        href: `mailto:${emailPart}@${proton}`,
         label: "Email",
         icon: "bi-envelope-at",
     },
@@ -31,8 +34,9 @@ const links = [
         href: "https://steamcommunity.com/id/muxbh28",
         label: "Steam",
         icon: "bi-steam",
-    }
+    },
 ];
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -77,7 +81,6 @@ const Contact = () => {
 
         setIsSubmitting(false);
     };
-
 
     return (
         <section className="d-flex justify-content-center align-items-center vh-100 bg-dark" data-aos="fade">
