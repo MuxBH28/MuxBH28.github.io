@@ -34,7 +34,7 @@
         "title": "Volim Te App",
         "description": "An Electron app designed for Windows and Linux to calculate the time interval between a selected date and the present.",
         "image": "volimteapp.png",
-        "link": "https://sehic.rf.gd/volimte",
+        "link": "http://volimte.sehic.rf.gd/",
         "development": "Since Dec 2023",
         "status": "On hold",
         "category": "Personal"
