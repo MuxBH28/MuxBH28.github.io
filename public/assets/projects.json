@@ -128,5 +128,15 @@
         "development": "June 2025.",
         "status": "In progress",
         "category": "Personal"
+    },
+    {
+        "icon": "bi-cup-straw",
+        "title": "Bobba Bubble BH",
+        "description": "The official website of a company located in Ilijaš, dedicated to distributing halal and vegan-certified Bobba Bubble teas.",
+        "image": "bobbabubble.png",
+        "link": "https://bobbabubble.ba/",
+        "development": "July 2025.",
+        "status": "In progress",
+        "category": "Client"
     }
 ]
