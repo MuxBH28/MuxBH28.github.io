@@ -132,11 +132,21 @@
     {
         "icon": "bi-cup-straw",
         "title": "Bobba Bubble BH",
-        "description": "The official website of a company located in Ilijaš, dedicated to distributing halal and vegan-certified Bobba Bubble teas.",
+        "description": "The official website of a company located in Ilijaš, dedicated to distributing halal and vegan-certified bubble teas.",
         "image": "bobbabubble.png",
         "link": "https://bobbabubble.ba/",
         "development": "July 2025.",
         "status": "In progress",
         "category": "Client"
+    },
+    {
+        "icon": "bi-hdd-rack",
+        "title": "Server Homepage",
+        "description": "It serves system monitoring data (CPU, RAM, Disk, uptime), manages custom links via API, and shows weather information fetched from external services.",
+        "image": "server.png",
+        "link": "https://github.com/MuxBH28/server-homepage",
+        "development": "July 24th 2025.",
+        "status": "Completed",
+        "category": "Personal"
     }
 ]
