@@ -83,16 +83,20 @@ const Contact = () => {
     };
 
     return (
-        <section className="d-flex justify-content-center align-items-center vh-100 bg-dark" data-aos="fade">
+        <section
+            className="d-flex justify-content-center align-items-center bg-dark py-5"
+            data-aos="fade"
+        >
             <div className="container">
-                <div className="row">
-                    <div className="col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0">
-                        <div className="contact-card p-5 rounded shadow-lg text-center w-100">
+                <div className="row gy-4">
+                    {/* Lijeva kolona */}
+                    <div className="col-12 col-md-6 d-flex justify-content-center align-items-stretch">
+                        <div className="contact-card p-4 p-md-5 rounded shadow-lg text-center w-100">
                             <h1 className="text-danger mb-4 fw-bold">
                                 <i className="bi bi-telephone"></i> Contact Me
                             </h1>
 
-                            <ul className="list-unstyled mb-4">
+                            <ul className="list-unstyled mb-0">
                                 {links.map(({ href, label, icon }, index) => (
                                     <li key={index} className="mb-3" data-aos="fade-up">
                                         <a
@@ -109,8 +113,9 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="col-md-6">
-                        <div className="contact-card p-5 rounded shadow-lg w-100">
+                    {/* Desna kolona */}
+                    <div className="col-12 col-md-6 d-flex align-items-stretch">
+                        <div className="contact-card p-4 p-md-5 rounded shadow-lg w-100">
                             <h2 className="text-danger mb-4 fw-bold">
                                 <i className="bi bi-chat-dots"></i> Or send a Message
                             </h2>
@@ -151,7 +156,11 @@ const Contact = () => {
 
                                 <p id="responseMsg" className="mt-2 text-white"></p>
 
-                                <button type="submit" className="btn btn-danger w-100" disabled={isSubmitting}>
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger w-100"
+                                    disabled={isSubmitting}
+                                >
                                     {isSubmitting ? "Sending..." : "Send Message"}
                                 </button>
                             </form>
@@ -161,6 +170,7 @@ const Contact = () => {
             </div>
         </section>
     );
+
 };
 
 export default Contact;
