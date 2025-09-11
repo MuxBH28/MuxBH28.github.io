@@ -126,7 +126,7 @@
         "image": "vaktija360.png",
         "link": "https://vaktija360.msehic.com/",
         "development": "June 2025.",
-        "status": "In progress",
+        "status": "On hold",
         "category": "Personal"
     },
     {
@@ -136,7 +136,7 @@
         "image": "bobbabubble.png",
         "link": "https://bobbabubble.ba/",
         "development": "July 2025.",
-        "status": "In progress",
+        "status": "Completed",
         "category": "Client"
     },
     {
@@ -148,5 +148,15 @@
         "development": "July 24th 2025.",
         "status": "Completed",
         "category": "Personal"
+    },
+    {
+        "icon": "bi-fork-knife",
+        "title": "Boss Group",
+        "description": "Website for Boss Group (bistro, restaurant, hotel) with interactive menu - built in collaboration with Turbine Tech Development.",
+        "image": "boss.png",
+        "link": "https://bossgroup.ba",
+        "development": "Sep 2025.",
+        "status": "Completed",
+        "category": "Client"
     }
 ]

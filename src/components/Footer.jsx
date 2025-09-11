@@ -30,7 +30,7 @@ const Footer = () => {
 
                 <div className="d-flex flex-wrap justify-content-center gap-3">
                     <a
-                        href="mailto:sehicmuhammed7@proton.me"
+                        href={`mailto:${["contact", "msehic.com"].join("@")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-danger fs-4"

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
 
-const emailPart = "sehicmuhammed7";
-const proton = "proton.me";
+const emailPart = "contact";
+const proton = "msehic.com";
 
 const links = [
     {

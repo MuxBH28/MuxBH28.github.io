@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "version": "1.5.7",
+  "version": "1.5.8",
   "type": "module",
   "homepage": "https://msehic.com/",
   "scripts": {

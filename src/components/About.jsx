@@ -149,10 +149,10 @@ const About = () => {
                                     <i className="bi bi-envelope"></i> Email:{" "}
                                 </strong>
                                 <a
-                                    href={`mailto:${["sehicmuhammed7", "proton", "me"].join("@")}`}
+                                    href={`mailto:${["contact", "msehic.com"].join("@")}`}
                                     className="text-dark"
                                 >
-                                    {["sehicmuhammed7", "proton", "me"].join("@")}
+                                    {["contact", "msehic.com"].join("@")}
                                 </a>
                             </li>
                             <li>
