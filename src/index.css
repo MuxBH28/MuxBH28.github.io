@@ -140,62 +140,6 @@ a {
   }
 }
 
-.glitch-text {
-  position: relative;
-  color: white;
-  font-weight: bold;
-}
-
-.glitch-text::before,
-.glitch-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  background: transparent;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-}
-
-.glitch-text::before {
-  left: 2px;
-  text-shadow: -2px 0 red;
-  animation: glitch 2s infinite linear alternate-reverse;
-}
-
-.glitch-text::after {
-  left: -2px;
-  text-shadow: -2px 0 blue;
-  animation: glitch 2s infinite linear alternate-reverse;
-}
-
-@keyframes glitch {
-  0% {
-    clip: rect(0, 900px, 0, 0);
-  }
-
-  5% {
-    clip: rect(5px, 900px, 30px, 0);
-  }
-
-  10% {
-    clip: rect(10px, 900px, 15px, 0);
-  }
-
-  15% {
-    clip: rect(15px, 900px, 40px, 0);
-  }
-
-  20% {
-    clip: rect(5px, 900px, 20px, 0);
-  }
-
-  100% {
-    clip: rect(0, 900px, 0, 0);
-  }
-}
-
 .stat-number {
   font-size: 2rem;
   font-weight: bold;

@@ -24,7 +24,7 @@ const recommendations = [
         name: "Floorp",
         description: "Firefox? Well it is, but better!",
         icon: "bi-browser-firefox",
-        link: "https://floorp.app/en",
+        link: "https://floorp.app/",
         color: "text-primary",
     },
     {
@@ -50,7 +50,7 @@ const recommendations = [
     },
     {
         name: "Open Hardware Monitor",
-        description: "Free open source software that monitors temperature sensors, fan speeds, voltages, load and clock speeds of a computer.",
+        description: "Free open source software that monitors sensors of a computer.",
         icon: "bi-cpu",
         link: "https://openhardwaremonitor.org/",
         color: "text-secondary",
@@ -61,21 +61,27 @@ const Recommendations = () => {
     return (
         <section className="py-5 bg-dark text-light" id="recommendations">
             <div className="container">
-                <h2 className="text-center text-danger mb-4" data-aos="fade-up">
-                    <i className="bi bi-star"></i> What I use?
+                <h2 className="text-center text-danger mb-5" data-aos="fade-up">
+                    <i className="bi bi-star me-2"></i> Tools I Recommend
                 </h2>
-                <div className="row">
+
+                <div className="row g-4">
                     {recommendations.map((tool, index) => (
-                        <div key={index} className="col-lg-3 col-md-4 mb-4">
-                            <div className="card bg-light text-dark shadow-sm border-0 rounded h-100" data-aos="zoom-in" data-aos-duration="800">
-                                <div className="card-body text-center">
-                                    <i className={`bi ${tool.icon} ${tool.color} display-4 mb-3`}></i>
-                                    <h5 className="card-title">{tool.name}</h5>
-                                    <p className="card-text">{tool.description}</p>
-                                </div>
-                                <div className="card-footer">
-                                    <a href={tool.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline-danger w-100">
-                                        Visit <i className="bi bi-box-arrow-up-right"></i>
+                        <div key={index} className="col-lg-3 col-md-4" data-aos="zoom-in" data-aos-duration="800">
+                            <div className="card h-100 border-0 shadow-lg">
+                                <div className="card-body text-center bg-light text-dark d-flex flex-column">
+                                    <div className="mb-3">
+                                        <i className={`bi ${tool.icon} ${tool.color} display-5`}></i>
+                                    </div>
+                                    <h5 className="card-title fw-bold">{tool.name}</h5>
+                                    <p className="card-text flex-grow-1">{tool.description}</p>
+                                    <a
+                                        href={tool.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn btn-outline-danger mt-3"
+                                    >
+                                        Visit <i className="bi bi-box-arrow-up-right ms-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -85,6 +91,7 @@ const Recommendations = () => {
             </div>
         </section>
     );
+
 };
 
 export default Recommendations;

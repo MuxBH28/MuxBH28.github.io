@@ -112,15 +112,13 @@ const Hero = () => {
     return (
         <section
             className="hero-section bg-dark text-light position-relative overflow-hidden d-flex flex-column justify-content-center px-3 py-5"
-            style={{ height: isLarge ? '100vh' : 'auto' }}
+            style={{ height: isLarge ? "100vh" : "auto" }}
             ref={containerRef}
         >
-
-
             {icons.current.map((icon, index) => (
                 <i
                     key={index}
-                    className={`bi ${icon.class} floating-icon`}
+                    className={`bi ${icon.class} floating-icon text-secondary opacity-25`}
                     style={{
                         fontSize: `${icon.fontSize}rem`,
                         top: `${icon.top}%`,
@@ -130,36 +128,53 @@ const Hero = () => {
                 />
             ))}
 
-
-            <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between h-100 position-relative z-2 gap-4 text-center text-md-start">
-                <div className="col-12 col-md-7 mb-4 mb-md-0">
-                    <h1 className="hero-title fs-1 mb-3">
-                        <span className="typed-text">{typedText}</span>
+            <section className="container d-flex flex-column flex-md-row align-items-center justify-content-between h-100 position-relative z-2 gap-5 py-5">
+                <div className="col-12 col-md-7 text-center text-md-start">
+                    <h1 className="hero-title display-4 fw-bold mb-3">
+                        <span className="typed-text text-gradient-red">{typedText}</span>
                         <span className="cursor-blink">|</span>
                     </h1>
 
-                    <blockquote className="blockquote glitch-text" data-aos="fade-up">
+                    <blockquote
+                        className="blockquote border-start border-3 border-danger ps-3 mt-3"
+                        data-aos="fade-up"
+                    >
                         <p
-                            className="fs-5 fw-semibold hero-quote glitch-text"
+                            className="fs-5 fw-semibold hero-quote mb-0 text-light-50"
                             data-text="It all started in 2008 with a game of Chess on Windows Vista"
                         >
-                            It all started in 2008 with a game of Chess on Windows Vista <span className="text-danger">&#9817;</span>
+                            It all started in 2008 with a game of Chess on Windows Vista{" "}
+                            <span className="text-danger">&#9817;</span>
                         </p>
-
                     </blockquote>
 
-                    <div className="stats-counter d-flex flex-wrap justify-content-center justify-content-md-start mt-4 gap-4">
-                        <div className="stat">
-                            <div className="stat-number" data-count="20">0</div>
-                            <div className="stat-label">Projects</div>
+                    <div className="stats-counter d-flex flex-wrap justify-content-center justify-content-md-start mt-5 gap-4">
+                        <div className="stat-card shadow rounded-4 p-4 text-center bg-black bg-opacity-50">
+                            <div
+                                className="stat-number fs-2 fw-bold text-danger"
+                                data-count="20"
+                            >
+                                0
+                            </div>
+                            <div className="stat-label small text-light-50">Projects</div>
                         </div>
-                        <div className="stat">
-                            <div className="stat-number" data-count="3">0</div>
-                            <div className="stat-label">Years</div>
+                        <div className="stat-card shadow rounded-4 p-4 text-center bg-black bg-opacity-50">
+                            <div
+                                className="stat-number fs-2 fw-bold text-danger"
+                                data-count="3"
+                            >
+                                0
+                            </div>
+                            <div className="stat-label small text-light-50">Years</div>
                         </div>
-                        <div className="stat">
-                            <div className="stat-number" data-count="10">0</div>
-                            <div className="stat-label">Clients</div>
+                        <div className="stat-card shadow rounded-4 p-4 text-center bg-black bg-opacity-50">
+                            <div
+                                className="stat-number fs-2 fw-bold text-danger"
+                                data-count="10"
+                            >
+                                0
+                            </div>
+                            <div className="stat-label small text-light-50">Clients</div>
                         </div>
                     </div>
                 </div>
@@ -168,21 +183,21 @@ const Hero = () => {
                     <img
                         src="./assets/logo.png"
                         alt="Logo"
-                        className="position-relative z-2 img-fluid"
-                        style={{ maxWidth: "150px" }}
+                        className="position-relative z-2 img-fluid rounded-circle shadow-lg border border-3 border-danger"
                     />
-
                 </div>
+            </section>
 
-            </div>
-
-            {isLarge && <div className="scroll-indicator">
-                <div className="mouse">
-                    <div className="wheel"></div>
+            {isLarge && (
+                <div className="scroll-indicator text-center">
+                    <div className="mouse border border-light mx-auto mb-2">
+                        <div className="wheel bg-light"></div>
+                    </div>
+                    <div className="arrow-down text-light"></div>
                 </div>
-                <div className="arrow-down"></div>
-            </div>}
+            )}
         </section>
+
     );
 };
 

@@ -1,58 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+    const location = useLocation();
+    const [isCollapsed, setIsCollapsed] = useState(true);
+
+    useEffect(() => {
+        // Zatvori navbar kad se ruta promijeni
+        setIsCollapsed(true);
+    }, [location]);
+
+    const handleToggle = () => setIsCollapsed(!isCollapsed);
+
+    const navItems = [
+        { to: "/", label: "Home", icon: "bi-house-door", delay: 1200 },
+        { to: "/projects", label: "Projects", icon: "bi-folder-check", delay: 1300 },
+        { to: "/terms", label: "Terms", icon: "bi-briefcase", delay: 1300 },
+        { to: "/contact", label: "Contact", icon: "bi-envelope", delay: 1400 },
+    ];
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-danger shadow-lg" data-aos="fade-down" data-aos-duration="1500">
+        <nav
+            className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-danger shadow-lg"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+        >
             <div className="container">
                 <Link className="navbar-brand text-danger fw-bold" to="/">
-                    <i className="bi bi-code-slash me-2 fs-3"></i>msehic
+                    <i className="bi bi-code-slash me-2 fs-3"></i> msehic
                 </Link>
+
                 <button
                     className="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    onClick={handleToggle}
                     aria-controls="navbarNav"
-                    aria-expanded="false"
+                    aria-expanded={!isCollapsed}
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <div className="navbar-nav ms-auto">
-                        <Link
-                            className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
-                            to="/"
-                            data-aos="fade-left"
-                            data-aos-duration="1200"
-                        >
-                            <i className="bi bi-house-door me-2"></i>Home
-                        </Link>
-                        <Link
-                            className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
-                            to="/projects"
-                            data-aos="fade-left"
-                            data-aos-duration="1300"
-                        >
-                            <i className="bi bi-folder-check me-2"></i>Projects
-                        </Link>
-                        <Link
-                            className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
-                            to="/terms"
-                            data-aos="fade-left"
-                            data-aos-duration="1300"
-                        >
-                            <i className="bi bi-briefcase me-2"></i>Terms
-                        </Link>
-                        <Link
-                            className="nav-link text-light fs-5 px-3 py-2 rounded-3 hover-underline-animation"
-                            to="/contact"
-                            data-aos="fade-left"
-                            data-aos-duration="1400"
-                        >
-                            <i className="bi bi-envelope me-2"></i>Contact
-                        </Link>
-                    </div>
+
+                <div className={`collapse navbar-collapse ${!isCollapsed ? "show" : ""}`} id="navbarNav">
+                    <ul className="navbar-nav ms-auto">
+                        {navItems.map((item, idx) => (
+                            <li key={idx} className="nav-item">
+                                <Link
+                                    to={item.to}
+                                    className={`nav-link fs-5 px-3 py-2 rounded-3 hover-underline-animation ${location.pathname === item.to ? "active text-danger fw-bold" : "text-light"
+                                        }`}
+                                    onClick={() => setIsCollapsed(true)}
+                                    data-aos="fade-left"
+                                    data-aos-duration={item.delay}
+                                >
+                                    <i className={`bi ${item.icon} me-2`}></i> {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </nav>
