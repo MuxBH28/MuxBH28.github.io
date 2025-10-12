@@ -158,5 +158,15 @@
         "development": "Sep 2025.",
         "status": "Completed",
         "category": "Client"
+    },
+    {
+        "icon": "bi-mortarboard",
+        "title": "Timetable",
+        "description": "A web application for students of my Uni, providing access to class schedules, exam dates, and useful links — all in one place. ",
+        "image": "timetable.png",
+        "link": "https://timetable.msehic.com",
+        "development": "Oct 2025.",
+        "status": "Completed",
+        "category": "Personal"
     }
 ]
