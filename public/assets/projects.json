@@ -71,10 +71,10 @@
     },
     {
         "icon": "bi-lightning",
-        "title": "Turbine Tech",
+        "title": "Energobih",
         "description": "A website presenting a project on renewable energy, featuring data monitoring from an Arduino device.",
         "image": "turbinetech.png",
-        "link": "https://turbinetech.ba/",
+        "link": "https://energobih.ba/",
         "development": "Apr 2024",
         "status": "Completed",
         "category": "Client"
